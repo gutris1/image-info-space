@@ -17,7 +17,6 @@ async function SDImageInfoParser() {
     return;
   }
 
-  img.style.opacity = '1';
   ImagePanel.classList.add('img-enter');
 
   const output = await SDImageParser(img);
@@ -26,6 +25,7 @@ async function SDImageInfoParser() {
   window.SDImageInfoRawOutput = output;
   HTMLPanel.classList.add('prose');
   HTMLPanel.innerHTML = await SDImageInfoPlainTextToHTML(output);
+  img.style.opacity = '1';
 
   document.querySelectorAll('.sdimageinfo-output-section').forEach(s => {
     const t = s.querySelector('.sdimageinfo-output-title');
