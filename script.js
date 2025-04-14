@@ -14,7 +14,7 @@ async function SDImageInfoParser() {
     HTMLPanel.innerHTML = await SDImageInfoPlainTextToHTML('');
     ImagePanel.classList.remove('img-enter');
     window.parentIFrame.size(0);
-    document.getElementById('iFrameResizer0')?.style.height='0';
+    document.getElementById('iFrameResizer0').style.height = '0';
     return;
   }
 
