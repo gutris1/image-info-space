@@ -18,7 +18,6 @@ async function SDImageInfoParser() {
     return;
   }
 
-  img.onclick = () => SDImageInfoImageViewer(img);
   img.style.opacity = '1';
   ImagePanel.classList.add('img-enter');
 
