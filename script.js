@@ -13,7 +13,8 @@ async function SDImageInfoParser() {
   if (!img) {
     HTMLPanel.innerHTML = await SDImageInfoPlainTextToHTML('');
     ImagePanel.classList.remove('img-enter');
-    document.getElementById('iFrameResizer0')?.style.height = '0';
+    const iframe = document.getElementById('iFrameResizer0');
+    if (iframe) iframe.style.height = '0';
     return;
   }
 
