@@ -6,14 +6,11 @@
   --output-text-color: var(--body-text-color);
 }
 
-#tab_sd_image_info {
-  padding-right: 0px;
-  padding-left: 0px;
-  border: 0px;
-  overflow: hidden;
+body > div > div > main {
+  max-width: 100% !important;
 }
 
-#SDImageInfo-Geninfo {
+#SDImageInfo-Image .icon-button-wrapper > button:nth-child(1) {
   display: none;
 }
 
@@ -78,7 +75,7 @@
   opacity: 1;
 }
 
-#SDImageInfo-ClearImage-Button {
+#SDImageInfo-Image .icon-button-wrapper > button:nth-child(2) {
   transform: scale(3);
   position: relative;
   top: 4px;
@@ -96,7 +93,7 @@
   transition: 0.3s ease;
 }
 
-#SDImageInfo-ClearImage-Button > div {
+#SDImageInfo-Image .icon-button-wrapper > button:nth-child(2) > div {
   position: relative;
   right: 1px;
   top: 1px;
@@ -105,15 +102,15 @@
   transition: 0.3s ease;
 }
 
-#SDImageInfo-ClearImage-Button path {
+#SDImageInfo-Image .icon-button-wrapper > button:nth-child(2) path {
   stroke-width: 5px !important;
 }
 
-#SDImageInfo-ClearImage-Button:hover {
+#SDImageInfo-Image .icon-button-wrapper > button:nth-child(2):hover {
   color: var(--primary-500) !important;
 }
 
-#SDImageInfo-ClearImage-Button:hover > div {
+#SDImageInfo-Image .icon-button-wrapper > button:nth-child(2):hover > div {
   filter: drop-shadow(0 0 2px var(--primary-500));
 }
 
