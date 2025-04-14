@@ -13,12 +13,14 @@ async function SDImageInfoParser() {
   if (!img) {
     HTMLPanel.innerHTML = await SDImageInfoPlainTextToHTML('');
     ImagePanel.classList.remove('img-enter');
+    document.getElementById('iFrameResizer0')?.style.height = '0';
     return;
   }
 
-  //img.onclick = () => SDImageInfoImageViewer(img);
-
+  img.onclick = () => SDImageInfoImageViewer(img);
+  img.style.opacity = '1';
   ImagePanel.classList.add('img-enter');
+
   const output = await SDImageParser(img);
   RawOutput.value = output;
   updateInput(RawOutput);
