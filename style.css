@@ -68,10 +68,6 @@ body > gradio-app > .gradio-container {
   transition: opacity 1s ease;
 }
 
-#SDImageInfo-Image.img-enter img {
-  opacity: 1;
-}
-
 #SDImageInfo-Image .icon-button-wrapper > button:nth-child(2) {
   transform: scale(3);
   position: relative;
