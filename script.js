@@ -13,22 +13,18 @@ async function SDImageInfoParser() {
   if (!img) {
     HTMLPanel.innerHTML = await SDImageInfoPlainTextToHTML('');
     ImagePanel.classList.remove('img-enter');
-    ImagePanel.style.flex = '';
-    ImagePanel.style.background = '';
     return;
   }
 
-  ImagePanel.style.flex = 'unset';
-  ImagePanel.style.background = 'transparent';
   //img.onclick = () => SDImageInfoImageViewer(img);
 
+  ImagePanel.classList.add('img-enter');
   const output = await SDImageParser(img);
   RawOutput.value = output;
   updateInput(RawOutput);
   window.SDImageInfoRawOutput = output;
   HTMLPanel.classList.add('prose');
   HTMLPanel.innerHTML = await SDImageInfoPlainTextToHTML(output);
-  ImagePanel.classList.add('img-enter');
 
   document.querySelectorAll('.sdimageinfo-output-section').forEach(s => {
     const t = s.querySelector('.sdimageinfo-output-title');
@@ -95,7 +91,6 @@ async function SDImageInfoPlainTextToHTML(inputs) {
   }
 
   if (inputs === undefined || inputs === null || inputs.trim() === '') {
-    OutputPanel.style.marginTop = '';
     OutputPanel.style.transition = 'none';
     OutputPanel.classList.remove('display-output-panel');
 
@@ -104,12 +99,10 @@ async function SDImageInfoPlainTextToHTML(inputs) {
     OutputPanel.classList.add('display-output-panel');
 
     if (inputs.trim().includes('Nothing To See Here') || inputs.trim().includes('Nothing To Read Here')) {
-      OutputPanel.style.marginTop = '25%';
       titlePrompt = '';
       outputHTML = SDImageInfoHTMLOutput('', inputs);
 
     } else if (inputs.trim().startsWith('OPPAI:')) {
-      OutputPanel.style.marginTop = '5%';
       const sections = [ { title: titleEncrypt, content: EncryptInfo }, { title: titleSha, content: Sha256Info } ];
       sections.forEach(section => {
         if (section.content && section.content.trim() !== '') outputHTML += SDImageInfoHTMLOutput(section.title, section.content);
@@ -117,7 +110,6 @@ async function SDImageInfoPlainTextToHTML(inputs) {
       outputHTML += SDImageInfoHTMLOutput('', inputs);
 
     } else {
-      OutputPanel.style.marginTop = '5%';
       inputs = inputs.replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(br, '<br>');
       inputs = inputs.replace(/Seed:\s?(\d+),/gi, function(match, seedNumber) {
         return `<span id='SDImageInfo-Seed-Button' title='Copy Seed Value' onclick='SDImageInfoCopyButtonEvent(event)'>Seed</span>: ${seedNumber},`;
