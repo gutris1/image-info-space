@@ -14,28 +14,26 @@ body > div > div > main {
   display: none;
 }
 
+#SDImageInfo-Image > .image-container {
+  width: 100% !important;
+}
+
 #SDImageInfo-imageRow {
   gap: 0;
 }
 
 #SDImageInfo-Image {
-  height: 100% !important;
+  height: unset !important;
   display: flex;
   flex-grow: 3 !important;
   position: relative;
-  justify-content: flex-start;
-  width: 100%;
+  justify-content: center;
+  max-width: 100%;
   max-height: 100%;
   border: 1px solid #000 !important;
   background: var(--input-background-fill);
   border-radius: 0.8rem !important;
   overflow: hidden !important;
-}
-
-@media (max-width: 600px) {
-  #SDImageInfo-Image {
-    flex: unset;
-  }
 }
 
 #SDImageInfo-Image::after {
@@ -50,6 +48,8 @@ body > div > div > main {
 
 #SDImageInfo-Image.img-enter {
   position: absolute;
+  top: 0;
+  left: 0;
 }
 
 #SDImageInfo-Image.img-enter::after {
@@ -58,12 +58,16 @@ body > div > div > main {
 }
 
 #SDImageInfo-Image img {
-  display: block;
+  display: flex;
   cursor: auto;
+  position: relative;
   object-fit: cover;
   object-position: top;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
   max-width: 100%;
-  max-height: 100%;
+  max-height: 100vh;
   opacity: 0;
   user-select: none;
   -webkit-user-select: none;
@@ -123,6 +127,7 @@ body > div > div > main {
 
 #SDImageInfo-OutputPanel.display-output-panel {
   opacity: 1;
+  margin-top: 20%;
 }
 
 #SDImageInfo-HTML {
