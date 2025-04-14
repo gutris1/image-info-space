@@ -19,12 +19,19 @@ body > gradio-app > .gradio-container {
   width: 100% !important;
 }
 
-#SDImageInfo-imageRow {
+#SDImageInfo-Column {
+  position: absolute;
+  background: transparent;
+  justify-content: center;
+  align-items: center;
   gap: 0;
+  margin: 0;
+  padding: 0;
 }
 
 #SDImageInfo-Image {
   height: unset !important;
+  width: 40vw;
   display: flex;
   flex-grow: 3 !important;
   position: relative;
@@ -37,25 +44,10 @@ body > gradio-app > .gradio-container {
   overflow: hidden !important;
 }
 
-#SDImageInfo-Image::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: transparent;
-  box-shadow: none;
-  filter: drop-shadow(0 0 1px #000);
-}
-
 #SDImageInfo-Image.img-enter {
   position: absolute;
-  top: 0;
-  left: 0;
-}
-
-#SDImageInfo-Image.img-enter::after {
-  background: linear-gradient(to bottom, rgba(0,0,0,0) 40%, rgba(0,0,0,0.8) 100%);
-  box-shadow: inset 0 0 4px 1px #000;
+  height: 100vh !important;
+  width: 100vw !important;
 }
 
 #SDImageInfo-Image img {
