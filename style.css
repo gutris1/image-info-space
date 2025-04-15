@@ -378,15 +378,15 @@ body > gradio-app footer,
   --parser-text-nonlink: var(--body-text-color);
 }
 
-.sd-image-parser-modeloutput-line {
+#SD-Image-Parser-Model-Output .sd-image-parser-modeloutput-line {
   display: flex;
   padding: 0px;
   gap: 0.5rem;
   border-radius: 1rem;
 }
 
-.sd-image-parser-modeloutput-label,
-.sd-image-parser-modeloutput-hashes {
+#SD-Image-Parser-Model-Output .sd-image-parser-modeloutput-label,
+#SD-Image-Parser-Model-Output .sd-image-parser-modeloutput-hashes {
   display: flex;
   flex-wrap: wrap;
   word-wrap: break-word;
@@ -395,7 +395,7 @@ body > gradio-app footer,
   filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.5));
 }
 
-.sd-image-parser-modeloutput-label {
+#SD-Image-Parser-Model-Output .sd-image-parser-modeloutput-label {
   width: 16%;
   background-color: var(--input-background-fill);
   font-size: 15px;
@@ -405,7 +405,7 @@ body > gradio-app footer,
   justify-content: center;
 }
 
-.sd-image-parser-modeloutput-hashes {
+#SD-Image-Parser-Model-Output .sd-image-parser-modeloutput-hashes {
   width: 84%;
   overflow-wrap: break-word;
   column-gap: 7px;
@@ -422,9 +422,9 @@ body > gradio-app footer,
   align-items: flex-start;
 }
 
-.sd-image-parser-modeloutput-hashes .sd-image-parser-link {
+#SD-Image-Parser-Model-Output .sd-image-parser-modeloutput-hashes .sd-image-parser-link {
   font-size: 13px;
-  text-decoration: none;
+  text-decoration: none !important;
   border: 1px solid var(--primary-600);
   transition: color 0.2s ease !important;
   padding: 2px 3px;
@@ -434,16 +434,15 @@ body > gradio-app footer,
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 50ch;
-  white-space: nowrap;
   font-weight: normal;
 }
 
-.sd-image-parser-modeloutput-hashes .sd-image-parser-link:hover {
+#SD-Image-Parser-Model-Output .sd-image-parser-modeloutput-hashes .sd-image-parser-link:hover {
   color: var(--primary-400) !important;
   border: 1px solid var(--link-text-color-hover);
 }
 
-.sd-image-parser-modeloutput-hashes .sd-image-parser-nonlink {
+#SD-Image-Parser-Model-Output .sd-image-parser-modeloutput-hashes .sd-image-parser-nonlink {
   color: var(--parser-text-nonlink);
   font-size: 14px;
   border: 1px solid transparent;
