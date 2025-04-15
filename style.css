@@ -12,6 +12,11 @@ html {
   scrollbar-width: none;
 }
 
+body {
+  position: absolute;
+  background: var(--background-fill-primary);
+}
+
 body > gradio-app {
   background: transparent !important;
 }
@@ -21,6 +26,7 @@ body > gradio-app > .gradio-container {
   max-width: 100% !important;
 }
 
+body > gradio-app footer,
 #SDImageInfo-Image > .image-container button:nth-child(1){
   display: none !important;
 }
@@ -79,12 +85,17 @@ body > gradio-app > .gradio-container {
 }
 
 #SDImageInfo-Image-Frame {
+  display: none;
   height: 100%;
   width: 100%;
   position: fixed;
   inset: 0;
   pointer-events: none;
   box-shadow: inset 0 0 8px 5px #000;
+}
+
+#SDImageInfo-Image.img-enter #SDImageInfo-Image-Frame {
+  display: flex;
 }
 
 #SDImageInfo-Image > .image-container button:nth-child(2) {
