@@ -134,7 +134,7 @@ body > gradio-app > .gradio-container {
 }
 
 #SDImageInfo-OutputPanel {
-  display: none;
+  display: flex;
   position: fixed;
   margin-top: 5%;
   padding: 10px;
@@ -147,7 +147,6 @@ body > gradio-app > .gradio-container {
 }
 
 #SDImageInfo-OutputPanel.display-output-panel {
-  display: flex;
   opacity: 1;
 }
 
@@ -157,8 +156,12 @@ body > gradio-app > .gradio-container {
   margin-bottom: -0.5rem !important;
   padding: 10px !important;
   border-radius: 0.8rem !important;
-  pointer-events: auto;
+  pointer-events: none;
   position: relative;
+}
+
+#SDImageInfo-OutputPanel.display-output-panel #SDImageInfo-HTML {
+  pointer-events: auto;
 }
 
 .gradio-container-4-40-0 #SDImageInfo-OutputPanel {
