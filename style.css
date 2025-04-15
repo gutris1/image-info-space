@@ -143,7 +143,7 @@ body > gradio-app footer,
   opacity: 0;
   pointer-events: none;
   background: transparent;
-  transition: opacity 0.2s ease;
+  transition: opacity 1s ease;
 }
 
 #SDImageInfo-OutputPanel.display-output-panel {
@@ -163,17 +163,6 @@ body > gradio-app footer,
 
 .gradio-container-4-40-0 #SDImageInfo-OutputPanel {
   margin-left: -10px;
-}
-
-#SDImageInfo-ModelOutput {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  width: auto;
-  height: auto;
-  cursor: default;
-  pointer-events: auto;
-  transition: 0.3s ease;
 }
 
 #SDImageInfo-OutputPanel .sdimageinfo-output-section {
@@ -247,6 +236,17 @@ body > gradio-app footer,
   transition: 0.3s ease;
 }
 
+#SDImageInfo-ModelOutput {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: auto;
+  height: auto;
+  cursor: default;
+  pointer-events: auto;
+  transition: 0.3s ease;
+}
+
 #SDImageInfo-OutputPanel .sdimageinfo-output-section.sdimageinfo-modelbox {
   border: 0;
   padding: 0;
@@ -270,27 +270,22 @@ body > gradio-app footer,
 @keyframes pulseBorder {
   0% {
     border-color: transparent;
-    filter: drop-shadow(0 0 0 var(--primary-400));
     box-shadow: inset 0 0 0 0 transparent;
   }
   25% {
     border-color: var(--primary-400);
-    filter: drop-shadow(0 0 2px var(--primary-400));
-    box-shadow: inset 0 0 10px 0 var(--primary-400);
+    box-shadow: inset 0 0 15px 2px var(--primary-400)
   }
   50% {
     border-color: var(--primary-400);
-    filter: drop-shadow(0 0 5px var(--primary-400));
-    box-shadow: inset 0 0 5px 0 var(--primary-400);
+    box-shadow: inset 0 0 3px 1px var(--primary-400)
   }
   75% {
     border-color: var(--primary-400);
-    filter: drop-shadow(0 0 2px var(--primary-400));
-    box-shadow: inset 0 0 10px 0 var(--primary-400);
+    box-shadow: inset 0 0 15px 2px var(--primary-400)
   }
   100% {
     border-color: transparent;
-    filter: drop-shadow(0 0 0 var(--primary-400));
     box-shadow: inset 0 0 0 0 transparent;
   }
 }
@@ -327,7 +322,7 @@ body > gradio-app footer,
   background: var(--button-primary-background-fill);
 }
 
-#refresh-spinner {
+#SDImageInfo-Spinner {
   color: var(--primary-400);
   margin: 0 auto;
   animation: spinner 1s linear infinite;
@@ -335,10 +330,10 @@ body > gradio-app footer,
 
 @keyframes spinner {
   0% {
-    transform: rotate(360deg);
+    transform: rotate(0deg);
   }
   100% {
-    transform: rotate(0deg);
+    transform: rotate(360deg);
   }
 }
 
