@@ -48,7 +48,7 @@ body > gradio-app > .gradio-container {
 
 #SDImageInfo-Image {
   height: unset !important;
-  width: 40vw;
+  width: 25vw;
   display: flex;
   flex-grow: 3 !important;
   position: relative;
@@ -59,6 +59,12 @@ body > gradio-app > .gradio-container {
   background: var(--input-background-fill);
   border-radius: 0.8rem !important;
   overflow: hidden !important;
+}
+
+@media (max-width: 600px) {
+  #SDImageInfo-Image {
+    width: 100%;
+  }
 }
 
 #SDImageInfo-Image.img-enter {
