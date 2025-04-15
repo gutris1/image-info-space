@@ -9,13 +9,16 @@ async function SDImageInfoParser() {
   const HTMLPanel = document.getElementById('SDImageInfo-HTML');
   const ImagePanel = document.getElementById('SDImageInfo-Image');
   const img = ImagePanel.querySelector('img');
+  const footer = document.querySelector('body > gradio-app footer');
 
   if (!img) {
     HTMLPanel.innerHTML = await SDImageInfoPlainTextToHTML('');
     ImagePanel.classList.remove('img-enter');
+    footer.style.display = '';
     return;
   }
 
+  footer.style.display = 'none';
   ImagePanel.classList.add('img-enter');
   //img.onclick = () => SDImageInfoImageViewer(img);
 
