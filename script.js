@@ -14,10 +14,12 @@ async function SDImageInfoParser() {
   if (!img) {
     HTMLPanel.innerHTML = await SDImageInfoPlainTextToHTML('');
     ImagePanel.classList.remove('img-enter');
+    document.body.style.position = '';
     footer.style.display = '';
     return;
   }
 
+  document.body.style.position = 'relative';
   footer.style.display = 'none';
   ImagePanel.classList.add('img-enter');
   //img.onclick = () => SDImageInfoImageViewer(img);
