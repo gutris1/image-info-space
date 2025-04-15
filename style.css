@@ -15,6 +15,10 @@ body {
   background: var(--background-fill-primary);
 }
 
+body > gradio-app {
+  background: transparent !important;
+}
+
 body > div > div > main,
 body > gradio-app > .gradio-container {
   max-width: 100% !important;
@@ -55,8 +59,9 @@ body > gradio-app footer,
 }
 
 #SDImageInfo-Image.img-enter {
-  position: fixed;
+  position: absolute;
   top: 0;
+  left: 0;
   height: 100% !important;
   width: 100% !important;
 }
@@ -64,7 +69,7 @@ body > gradio-app footer,
 #SDImageInfo-Image img {
   display: flex;
   cursor: auto;
-  position: relative;
+  position: absolute;
   top: 0;
   left: 0;
   object-fit: cover;
