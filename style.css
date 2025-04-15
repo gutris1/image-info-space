@@ -20,7 +20,8 @@ body > gradio-app > .gradio-container {
   max-width: 100% !important;
 }
 
-#SDImageInfo-Image .icon-button-wrapper > button:nth-child(1) {
+body > gradio-app footer,
+#SDImageInfo-Image > .image-container button:nth-child(1){
   display: none;
 }
 
@@ -78,10 +79,6 @@ body > gradio-app > .gradio-container {
   -webkit-user-select: none;
   border-top-right-radius: 1rem;
   transition: opacity 1s ease;
-}
-
-#SDImageInfo-Image > .image-container button:nth-child(1) {
-  display: none;
 }
 
 #SDImageInfo-Image > .image-container button:nth-child(2) {
