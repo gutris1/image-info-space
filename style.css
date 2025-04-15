@@ -65,6 +65,7 @@ body > gradio-app footer,
   inset: 0;
   height: 100% !important;
   width: 100% !important;
+  background: transparent;
 }
 
 #SDImageInfo-Image img {
@@ -263,6 +264,19 @@ body > gradio-app footer,
   animation: undressBox 1s forwards ease-out;
 }
 
+#SDImageInfo-OutputPanel .sdimageinfo-output-failed {
+  display: flex;
+  width: 100%;
+  pointer-events: auto;
+  padding: 5px 10px;
+  color: var(--output-text-color);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.1), 0 0 5px 0 rgba(255, 255, 255, 0.2), inset 0 0 5px 0 rgba(255, 255, 255, 0.2);
+  filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.5));
+  background: rgba(0, 0, 0, 0.3);
+}
+
 .sdimageinfo-borderpulse {
   animation: pulseBorder 2s infinite alternate forwards;
 }
@@ -290,42 +304,15 @@ body > gradio-app footer,
   }
 }
 
-#SDImageInfo-SendButton {
-  display: none;
-  position: relative;
-  z-index: 2;
-  top: 0;
-  left: 0;
-  margin-left: 8px;
-  padding: 3px !important;
-  width: max-content;
-  pointer-events: auto;
-  grid-template-columns: 1fr !important;
-  justify-content: center;
-  align-items: center;
-}
-
-#SDImageInfo-SendButton button {
-  border: 1px solid #000;
-  position: relative;
-  padding: 6px 20px;
-  border-radius: 1rem;
-  box-shadow: 0 0 5px 1px #000;
-  transition: 0.2s ease;
-}
-
-#SDImageInfo-SendButton button:hover {
-  box-shadow: 0 0 5px 1px var(--primary-400);
-  filter: drop-shadow(0 0 9px var(--primary-400));
-  border-color: var(--background-fill-primary);
-  color: var(--background-fill-primary);
-  background: var(--button-primary-background-fill);
-}
-
 #SDImageInfo-Spinner {
-  color: var(--primary-400);
   margin: 0 auto;
-  animation: spinner 1s linear infinite;
+  filter: drop-shadow(0 0 10px rgba(0,0,0,0.7));
+  animation: spinner 1.5s linear infinite;
+}
+
+#SDImageInfo-Spinner path,
+#SDImageInfo-Spinner polygon {
+  fill: var(--primary-400);
 }
 
 @keyframes spinner {
