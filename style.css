@@ -12,11 +12,6 @@ html {
   scrollbar-width: none;
 }
 
-body {
-  position: absolute;
-  background: var(--background-fill-primary);
-}
-
 body > gradio-app {
   background: transparent !important;
 }
@@ -26,7 +21,6 @@ body > gradio-app > .gradio-container {
   max-width: 100% !important;
 }
 
-body > gradio-app footer,
 #SDImageInfo-Image > .image-container button:nth-child(1){
   display: none !important;
 }
