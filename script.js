@@ -17,7 +17,7 @@ async function SDImageInfoParser() {
   }
 
   ImagePanel.classList.add('img-enter');
-  img.onclick = () => SDImageInfoImageViewer(img);
+  //img.onclick = () => SDImageInfoImageViewer(img);
 
   const output = await SDImageParser(img);
   RawOutput.value = output;
