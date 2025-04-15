@@ -22,7 +22,7 @@ body > gradio-app > .gradio-container {
 
 body > gradio-app footer,
 #SDImageInfo-Image > .image-container button:nth-child(1){
-  display: none;
+  display: none !important;
 }
 
 #SDImageInfo-Image > .image-container {
