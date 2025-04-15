@@ -34,7 +34,7 @@ async function SDImageInfoParser() {
     const t = s.querySelector('.sdimageinfo-output-title');
     const w = s.querySelector('.sdimageinfo-output-wrapper');
     if (!t || !w) return;
-    w.onmouseenter = () => [t, w].forEach(x => x.style.background = 'var(--input-background-fill-hover)');
+    w.onmouseenter = () => [t, w].forEach(x => x.style.background = 'var(--image-info-output-bg-hover)');
     w.onmouseleave = () => [t, w].forEach(x => x.style.background = '');
   });
 }
