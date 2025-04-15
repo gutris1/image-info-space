@@ -59,9 +59,8 @@ body > gradio-app footer,
 }
 
 #SDImageInfo-Image.img-enter {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: fixed;
+  inset: 0;
   height: 100% !important;
   width: 100% !important;
 }
@@ -69,12 +68,10 @@ body > gradio-app footer,
 #SDImageInfo-Image img {
   display: flex;
   cursor: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: fixed;
+  inset: 0;
   object-fit: cover;
   object-position: top;
-  justify-content: center;
   height: 100%;
   width: 100%;
   max-width: 100%;
@@ -82,8 +79,16 @@ body > gradio-app footer,
   opacity: 0;
   user-select: none;
   -webkit-user-select: none;
-  border-top-right-radius: 1rem;
   transition: opacity 1s ease;
+}
+
+#SDImageInfo-Image-Frame {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  box-shadow: inset 0 0 8px 5px #000;
 }
 
 #SDImageInfo-Image > .image-container button:nth-child(2) {
@@ -122,6 +127,12 @@ body > gradio-app footer,
 }
 
 #SDImageInfo-OutputPanel {
+  display: none;
+  position: fixed;
+  margin-top: 5%;
+  padding: 10px;
+  top: 0;
+  left: 0;
   opacity: 0;
   pointer-events: none;
   background: transparent;
@@ -129,8 +140,8 @@ body > gradio-app footer,
 }
 
 #SDImageInfo-OutputPanel.display-output-panel {
+  display: flex;
   opacity: 1;
-  margin-top: 3%;
 }
 
 #SDImageInfo-HTML {
