@@ -1,20 +1,23 @@
 :root {
+  --image-info-bg: #fff;
   --output-text-color: #fff;
   --parser-text-nonlink: #fff;
 }
 
 .dark {
+  --image-info-bg: #0b0f19;
   --output-text-color: var(--body-text-color);
   --parser-text-nonlink: var(--body-text-color);
 }
 
 html {
   scrollbar-width: none;
+  background: var(--image-info-bg);
 }
 
 body {
   position: absolute;
-  background: var(--background-fill-primary);
+  background: var(--image-info-bg);
 }
 
 body > gradio-app {
