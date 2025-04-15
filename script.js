@@ -13,8 +13,8 @@ async function SDImageInfoParser() {
   if (!img) {
     HTMLPanel.innerHTML = await SDImageInfoPlainTextToHTML('');
     ImagePanel.classList.remove('img-enter');
-    document.body.style.height = 'unset';
-    setTimeout(() => document.body.style.height = '100%', 10);
+    setTimeout(() => document.body.style.height = 'unset', 50);
+    setTimeout(() => document.body.style.height = '100%', 100);
     return;
   }
 
